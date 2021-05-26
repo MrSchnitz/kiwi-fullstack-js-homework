@@ -3,23 +3,36 @@ import styled from "styled-components";
 import Keyboard from "../Keyboard";
 import PhoneDisplay from "./PhoneDisplay";
 import PhoneLayout from "./PhoneLayout";
+import PredictionSection from "../PredictionSection";
+import {WordType} from "../../models/Word";
 
 interface PhoneProps {
   displayText: string;
+  predictionWords: WordType[];
+  predictionWordsLoading?: boolean;
   onKeyPressed: (key: number) => void;
   onDeleteChar: () => void;
+  onPredictionSelect: (word: WordType) => void;
 }
 
 const Phone: React.FC<PhoneProps> = ({
   displayText,
+  predictionWords,
+  predictionWordsLoading,
   onKeyPressed,
   onDeleteChar,
+  onPredictionSelect,
 }: PhoneProps) => {
 
   return (
     <PhoneLayout>
       <PhoneContent>
         <PhoneDisplay text={displayText} />
+        <PredictionSection
+          predictions={predictionWords}
+          predictionsLoading={predictionWordsLoading}
+          onSelectPrediction={onPredictionSelect}
+        />
         <Keyboard
           onKeyPressed={onKeyPressed}
           onDeleteChar={onDeleteChar}

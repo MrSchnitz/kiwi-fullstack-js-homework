@@ -8,8 +8,11 @@ function MainPage() {
     <MainPageLayout>
       <Phone
         displayText={"Phone"}
+        predictionWords={[]}
+        predictionWordsLoading={false}
         onDeleteChar={() => null}
         onKeyPressed={() => null}
+        onPredictionSelect={() => null}
       />
     </MainPageLayout>
   );

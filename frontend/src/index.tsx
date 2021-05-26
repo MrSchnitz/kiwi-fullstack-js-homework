@@ -5,6 +5,8 @@ import { Routes } from "./routes";
 import { Provider } from "react-redux";
 import { configureAppStore } from "./internals/configureStore";
 
+import "./styles/main.scss";
+
 const store = configureAppStore();
 
 const App = () => (

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { withNavigation } from "../../hoc/NavBar";
 
 function MainPage() {
 
@@ -17,4 +18,4 @@ const MainPageLayout = styled.div`
   align-items: center;
 `;
 
-export default MainPage;
+export default withNavigation(MainPage);

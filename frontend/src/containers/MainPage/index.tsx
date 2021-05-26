@@ -1,14 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import { withNavigation } from "../../hoc/NavBar";
+import Phone from "../../components/Phone";
 
 function MainPage() {
-
-    return (
-        <MainPageLayout>
-            <h1>Main Page</h1>
-        </MainPageLayout>
-    );
+  return (
+    <MainPageLayout>
+      <Phone
+        displayText={"Phone"}
+        onDeleteChar={() => null}
+        onKeyPressed={() => null}
+      />
+    </MainPageLayout>
+  );
 }
 
 const MainPageLayout = styled.div`

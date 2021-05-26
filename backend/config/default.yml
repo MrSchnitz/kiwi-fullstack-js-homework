@@ -1,0 +1,8 @@
+server:
+  port: 5000
+
+db:
+  type: 'sqlite'
+  port: 5432
+  database: './data/t9-db'
+  synchronize: true

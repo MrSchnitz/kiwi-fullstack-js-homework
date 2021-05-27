@@ -1,12 +1,14 @@
-import { connectRouter } from "connected-react-router";
-import { Action, ThunkAction } from "@reduxjs/toolkit";
-import { all } from "redux-saga/effects";
-import { createBrowserHistory } from "history";
+import {connectRouter} from "connected-react-router";
+import {Action, ThunkAction} from "@reduxjs/toolkit";
+import {MainApiInterface, MainApiReducer, MainApiSaga,} from "../containers/MainPage/api/MainAPI";
+import {all} from "redux-saga/effects"
+import {createBrowserHistory} from "history";
 
 export const history = createBrowserHistory();
 
 export interface RootState {
   // API
+  mainApiSlice?: MainApiInterface;
   // Containers
 
   // Router
@@ -17,6 +19,7 @@ export type AppThunk = ThunkAction<void, RootState, unknown, Action<string>>;
 
 export const mainReducers = {
   // API
+  mainApiSlice: MainApiReducer,
   // Containers
 
   // Router
@@ -27,5 +30,5 @@ export const mainReducers = {
  * IMPORT EVERY OTHER NOT SOMEWHERE ELSE INJECTED SAGA
  */
 export default function* rootSaga() {
-  yield all([]);
+  yield all([MainApiSaga()]);
 }

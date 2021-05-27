@@ -1,18 +1,10 @@
 import React from "react";
-import { Alert } from "@kiwicom/orbit-components/lib";
-import { withNavigation } from "../../hoc/NavBar";
+import {withNavigation} from "../../hoc/NavBar";
 import Phone from "../../components/Phone";
 import styled from "styled-components";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../internals/RootState";
-import {
-  selectNumbers,
-  MainAPI,
-  selectText,
-  selectPredictionWords,
-  selectPredictionWordsLoading,
-} from "./api/MainAPI";
-import { WordType } from "../../models/Word";
+import {useDispatch, useSelector} from "react-redux";
+import {MainAPI, selectNumbers, selectPredictionWords, selectPredictionWordsLoading, selectText,} from "./api/MainAPI";
+import {WordType} from "../../models/Word";
 
 function MainPage() {
   const dispatch = useDispatch();

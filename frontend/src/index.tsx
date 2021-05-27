@@ -6,15 +6,16 @@ import { Provider } from "react-redux";
 import { configureAppStore } from "./internals/configureStore";
 
 import "./styles/main.scss";
+import ReactMarkdown from "react-markdown";
 
 const store = configureAppStore();
 
 const App = () => (
-    <Provider store={store}>
-        <React.StrictMode>
-            <Routes />
-        </React.StrictMode>
-    </Provider>
+  <Provider store={store}>
+    <React.StrictMode>
+      <Routes />
+    </React.StrictMode>
+  </Provider>
 );
 
 ReactDOM.render(<App />, document.getElementById("root"));

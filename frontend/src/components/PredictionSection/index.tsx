@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Prediction from "./Prediction";
+import { WordType } from "../../models/Word";
 import { Loading } from "@kiwicom/orbit-components/lib";
-import {WordType} from "../../models/Word";
 
 interface PredictionSectionProps {
   predictions: WordType[];
@@ -16,7 +16,7 @@ const PredictionSection: React.FC<PredictionSectionProps> = ({
   onSelectPrediction,
 }: PredictionSectionProps) => {
   return (
-    <PredictionContent
+    <PredictionSectionContent
       loading={!!predictionsLoading}
       show={predictions.length > 0 || !!predictionsLoading}
     >
@@ -32,7 +32,7 @@ const PredictionSection: React.FC<PredictionSectionProps> = ({
           />
         ))
       )}
-    </PredictionContent>
+    </PredictionSectionContent>
   );
 };
 
@@ -41,7 +41,7 @@ interface PredictionContentInterface {
   show: boolean;
 }
 
-const PredictionContent = styled.div<PredictionContentInterface>`
+const PredictionSectionContent = styled.div<PredictionContentInterface>`
   height: ${(props) => (props.show ? "7.5rem" : 0)};
   width: 100%;
   margin-bottom: 0.3rem;

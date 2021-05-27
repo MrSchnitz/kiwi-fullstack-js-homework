@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Keyboard from "../Keyboard";
-import PhoneDisplay from "./PhoneDisplay";
 import PhoneLayout from "./PhoneLayout";
+import PhoneDisplay from "./PhoneDisplay";
+import Keyboard from "../Keyboard";
 import PredictionSection from "../PredictionSection";
-import {WordType} from "../../models/Word";
+import { WordType } from "../../models/Word";
 
 interface PhoneProps {
   displayText: string;
@@ -23,7 +23,6 @@ const Phone: React.FC<PhoneProps> = ({
   onDeleteChar,
   onPredictionSelect,
 }: PhoneProps) => {
-
   return (
     <PhoneLayout>
       <PhoneContent>

@@ -1,7 +1,9 @@
 import React from "react";
-import styled, {keyframes} from "styled-components";
+import { useDispatch } from "react-redux";
+import { push } from "connected-react-router";
+import styled, { keyframes } from "styled-components";
 import KeyboardButton from "./KeyboardButton";
-import {ChevronDoubleLeft} from "@kiwicom/orbit-components/lib/icons";
+import { ChevronDoubleLeft } from "@kiwicom/orbit-components/lib/icons";
 
 interface KeyboardProps {
   onKeyPressed: (key: number) => void;
@@ -14,6 +16,9 @@ const Keyboard: React.FC<KeyboardProps> = ({
   onDeleteChar,
   show,
 }: KeyboardProps) => {
+  const dispatch = useDispatch();
+
+  const redirect = (url: string) => dispatch(push(url));
 
   const handleClick = (number: number) => onKeyPressed(number);
 

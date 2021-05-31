@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { Airplane, Partners } from "@kiwicom/orbit-components/lib/icons";
+import { DeviceMobile, Document } from "@kiwicom/orbit-components/lib/icons";
 
 export interface LinkInterface {
   title: string;
@@ -16,11 +16,11 @@ export const NavigationLinks: LinkInterface[] = [
   {
     title: "Main",
     url: Links.mainPage,
-    icon: <Airplane />,
+    icon: <DeviceMobile />,
   },
   {
     title: "Homework Description",
     url: Links.descriptionPage,
-    icon: <Partners />,
+    icon: <Document />,
   },
 ];

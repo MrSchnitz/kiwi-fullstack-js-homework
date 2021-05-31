@@ -42,4 +42,4 @@ const MainPageLayout = styled.div`
   align-items: center;
 `;
 
-export default withNavigation(MainPage);
+export default MainPage;

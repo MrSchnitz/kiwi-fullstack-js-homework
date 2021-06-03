@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+  font-family: "Circular Pro", -apple-system, ".SFNSText-Regular",
+    "San Francisco", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+  transition: 0.5s ease-in-out;
+}
+
+.switch-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.switch-wrapper > div {
+  position: absolute;
+  height: inherit;
+  width: 100%;
+}

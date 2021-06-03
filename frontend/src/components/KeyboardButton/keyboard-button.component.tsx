@@ -3,7 +3,7 @@ import { Button } from "@kiwicom/orbit-components/lib";
 import styled from "styled-components";
 import { Props } from "@kiwicom/orbit-components/lib/Button";
 
-interface KeyboardButtonProps {
+export interface KeyboardButtonProps {
   number: number;
   onClick: (number: number) => void;
   charArray?: string[];

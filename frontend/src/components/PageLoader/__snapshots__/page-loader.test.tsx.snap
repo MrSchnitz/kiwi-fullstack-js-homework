@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageLoader component should render PageLoader component 1`] = `ShallowWrapper {}`;

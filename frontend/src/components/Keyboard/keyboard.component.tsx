@@ -1,9 +1,9 @@
 import React from "react";
-import styled, {keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
 import KeyboardButton from "../KeyboardButton/keyboard-button.component";
-import {ChevronDoubleLeft} from "@kiwicom/orbit-components/lib/icons";
+import { ChevronDoubleLeft } from "@kiwicom/orbit-components/lib/icons";
 
-interface KeyboardProps {
+export interface KeyboardProps {
   onKeyPressed: (key: number) => void;
   onDeleteChar: () => void;
   show: boolean;
@@ -14,7 +14,51 @@ const Keyboard: React.FC<KeyboardProps> = ({
   onDeleteChar,
   show,
 }: KeyboardProps) => {
-  const handleClick = (number: number) => onKeyPressed(number);
+  const renderButtons = (
+    <>
+      <KeyboardButton number={1} charArray={[""]} onClick={onKeyPressed} />
+      <KeyboardButton
+        number={2}
+        charArray={["a", "b", "c"]}
+        onClick={onKeyPressed}
+      />
+      <KeyboardButton
+        number={3}
+        charArray={["d", "e", "f"]}
+        onClick={onKeyPressed}
+      />
+      <KeyboardButton
+        number={4}
+        charArray={["g", "h", "i"]}
+        onClick={onKeyPressed}
+      />
+      <KeyboardButton
+        number={5}
+        charArray={["j", "k", "l"]}
+        onClick={onKeyPressed}
+      />
+      <KeyboardButton
+        number={6}
+        charArray={["m", "n", "o"]}
+        onClick={onKeyPressed}
+      />
+      <KeyboardButton
+        number={7}
+        charArray={["p", "q", "r", "s"]}
+        onClick={onKeyPressed}
+      />
+      <KeyboardButton
+        number={8}
+        charArray={["t", "u", "v"]}
+        onClick={onKeyPressed}
+      />
+      <KeyboardButton
+        number={9}
+        charArray={["w", "x", "y", "z"]}
+        onClick={onKeyPressed}
+      />
+    </>
+  );
 
   return (
     <KeyboardLayout show={show}>
@@ -29,54 +73,12 @@ const Keyboard: React.FC<KeyboardProps> = ({
           iconRight: <ChevronDoubleLeft customColor={"#fff"} />,
         }}
       />
-      <KeyboardButtonsLayout>
-        <KeyboardButton number={1} charArray={[""]} onClick={handleClick} />
-        <KeyboardButton
-          number={2}
-          charArray={["a", "b", "c"]}
-          onClick={handleClick}
-        />
-        <KeyboardButton
-          number={3}
-          charArray={["d", "e", "f"]}
-          onClick={handleClick}
-        />
-        <KeyboardButton
-          number={4}
-          charArray={["g", "h", "i"]}
-          onClick={handleClick}
-        />
-        <KeyboardButton
-          number={5}
-          charArray={["j", "k", "l"]}
-          onClick={handleClick}
-        />
-        <KeyboardButton
-          number={6}
-          charArray={["m", "n", "o"]}
-          onClick={handleClick}
-        />
-        <KeyboardButton
-          number={7}
-          charArray={["p", "q", "r", "s"]}
-          onClick={handleClick}
-        />
-        <KeyboardButton
-          number={8}
-          charArray={["t", "u", "v"]}
-          onClick={handleClick}
-        />
-        <KeyboardButton
-          number={9}
-          charArray={["w", "x", "y", "z"]}
-          onClick={handleClick}
-        />
-      </KeyboardButtonsLayout>
+      <KeyboardButtonsLayout>{renderButtons}</KeyboardButtonsLayout>
     </KeyboardLayout>
   );
 };
 
-interface KayboardLayoutInterface {
+interface KeyboardLayoutInterface {
   show: boolean;
 }
 
@@ -89,7 +91,7 @@ const KeyboardPopUpAnimation = keyframes`
   }
 `;
 
-const KeyboardLayout = styled.div<KayboardLayoutInterface>`
+const KeyboardLayout = styled.div<KeyboardLayoutInterface>`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -102,6 +104,8 @@ const KeyboardLayout = styled.div<KayboardLayoutInterface>`
   animation: ${(props) => (props.show ? KeyboardPopUpAnimation : 0)};
   animation-duration: 2s;
 `;
+
+KeyboardLayout.displayName = "KeyboardLayout";
 
 const KeyboardButtonsLayout = styled.div`
   width: 100%;

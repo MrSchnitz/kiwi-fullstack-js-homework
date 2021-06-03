@@ -5,7 +5,7 @@ import { Routes } from "./routes";
 import { Provider } from "react-redux";
 import { configureAppStore } from "./internals/configureStore";
 
-import "./styles/main.scss";
+import "./resources/styles/main.scss";
 import ReactMarkdown from "react-markdown";
 
 const store = configureAppStore();

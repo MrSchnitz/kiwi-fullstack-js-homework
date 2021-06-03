@@ -1,6 +1,6 @@
 import {connectRouter} from "connected-react-router";
 import {Action, ThunkAction} from "@reduxjs/toolkit";
-import {MainApiInterface, MainApiReducer, MainApiSaga,} from "../containers/MainPage/api/MainAPI";
+import {MainApiInterface, MainApiReducer, MainApiSaga,} from "../pages/MainPage/api/MainAPI";
 import {all} from "redux-saga/effects"
 import {createBrowserHistory} from "history";
 

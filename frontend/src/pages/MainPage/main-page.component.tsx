@@ -1,5 +1,5 @@
 import React from "react";
-import Phone from "../../components/Phone";
+import Phone from "../../components/Phone/phone.component";
 import styled from "styled-components";
 import {useDispatch, useSelector} from "react-redux";
 import {MainAPI, selectNumbers, selectPredictionWords, selectPredictionWordsLoading, selectText,} from "./api/MainAPI";

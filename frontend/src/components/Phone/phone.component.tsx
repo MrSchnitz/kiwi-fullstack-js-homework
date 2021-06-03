@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import styled, {keyframes} from "styled-components";
-import PhoneLayout from "./PhoneLayout";
-import PhoneDisplay from "./PhoneDisplay";
-import Keyboard from "../Keyboard";
-import PredictionSection from "../PredictionSection";
+import PhoneLayout from "../PhoneLayout/phone-layout.component";
+import PhoneDisplay from "../PhoneDisplay/phone-display.component";
+import Keyboard from "../Keyboard/keyboard.component";
+import PredictionSection from "../PredictionSection/prediction-section.component";
 import {WordType} from "../../models/Word";
 
 interface PhoneProps {

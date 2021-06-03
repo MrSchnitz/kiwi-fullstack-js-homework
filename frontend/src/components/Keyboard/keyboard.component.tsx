@@ -1,6 +1,6 @@
 import React from "react";
 import styled, {keyframes} from "styled-components";
-import KeyboardButton from "./KeyboardButton";
+import KeyboardButton from "../KeyboardButton/keyboard-button.component";
 import {ChevronDoubleLeft} from "@kiwicom/orbit-components/lib/icons";
 
 interface KeyboardProps {

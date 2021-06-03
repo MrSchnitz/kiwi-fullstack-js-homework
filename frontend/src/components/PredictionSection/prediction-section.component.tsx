@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Prediction from "./Prediction";
+import Prediction from "../Prediction/prediction.component";
 import { WordType } from "../../models/Word";
 import { Loading } from "@kiwicom/orbit-components/lib";
 

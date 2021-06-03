@@ -5,23 +5,23 @@ import { history } from "./internals/RootState";
 import { Links } from "./internals/links";
 import { ConnectedRouter } from "connected-react-router/immutable";
 import MainSwitch from "./MainSwitch";
-import PageLoader from "./components/PageLoader";
+import PageLoader from "./components/PageLoader/page-loader.component";
 
-const MainPage = lazy(() => import("./containers/MainPage"));
+const MainPage = lazy(() => import("./pages/MainPage/main-page.component"));
 const AsyncMainPage = () => (
   <Suspense fallback={<PageLoader />}>
     <MainPage />
   </Suspense>
 );
 
-const DescriptionPage = lazy(() => import("./containers/DescriptionPage"));
+const DescriptionPage = lazy(() => import("./pages/DescriptionPage/description-page.component"));
 const AsyncDescriptionPage = () => (
   <Suspense fallback={<PageLoader />}>
     <DescriptionPage />
   </Suspense>
 );
 
-const NotFoundPage = lazy(() => import("./containers/NotFoundPage"));
+const NotFoundPage = lazy(() => import("./pages/NotFoundPage/not-found-page.component"));
 const AsyncNotFoundPage = () => (
   <Suspense fallback={<PageLoader />}>
     <NotFoundPage />

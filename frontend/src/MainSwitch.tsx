@@ -1,8 +1,8 @@
-import React, { ReactNode } from "react";
-import { withNavigation } from "./hoc/NavBar";
-import { useLocation } from "react-router-dom";
-import { AnimatedSwitch, spring } from "react-router-transition";
-import { Links } from "./internals/links";
+import React, {ReactNode} from "react";
+import {withNavigation} from "./hoc/NavBar";
+import {useLocation} from "react-router-dom";
+import {AnimatedSwitch, spring} from "react-router-transition";
+import {Links} from "./internals/links";
 
 interface MainSwitchProps {
   children: ReactNode;

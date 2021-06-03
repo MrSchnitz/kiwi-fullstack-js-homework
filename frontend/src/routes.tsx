@@ -1,33 +1,32 @@
-import React, {lazy, Suspense} from "react";
+import React, { lazy, Suspense } from "react";
 
-import {Route} from "react-router-dom";
-import {history} from "./internals/RootState";
-import {Loading} from "@kiwicom/orbit-components/lib";
-import {Links} from "./internals/links";
-import {ConnectedRouter} from "connected-react-router/immutable";
+import { Route } from "react-router-dom";
+import { history } from "./internals/RootState";
+import { Links } from "./internals/links";
+import { ConnectedRouter } from "connected-react-router/immutable";
 import MainSwitch from "./MainSwitch";
+import PageLoader from "./components/PageLoader";
 
 const MainPage = lazy(() => import("./containers/MainPage"));
 const AsyncMainPage = () => (
-  <Suspense fallback={<Loading type={"pageLoader"} />}>
+  <Suspense fallback={<PageLoader />}>
     <MainPage />
   </Suspense>
 );
 
 const DescriptionPage = lazy(() => import("./containers/DescriptionPage"));
 const AsyncDescriptionPage = () => (
-  <Suspense fallback={<Loading type={"pageLoader"} />}>
+  <Suspense fallback={<PageLoader />}>
     <DescriptionPage />
   </Suspense>
 );
 
 const NotFoundPage = lazy(() => import("./containers/NotFoundPage"));
 const AsyncNotFoundPage = () => (
-  <Suspense fallback={<Loading type={"pageLoader"} />}>
+  <Suspense fallback={<PageLoader />}>
     <NotFoundPage />
   </Suspense>
 );
-
 
 export function Routes() {
   return (

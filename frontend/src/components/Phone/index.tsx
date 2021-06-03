@@ -112,7 +112,6 @@ const PhoneLockedScreen = styled.div`
 
       animation: ${PhoneLockScreenPulseAnimation} 3s
         cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-      // animation-delay: 10s;
     }
     animation: ${PhoneLockScreenAnimation} 1.5s alternate infinite;
   }

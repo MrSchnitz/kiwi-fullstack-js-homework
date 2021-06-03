@@ -1,5 +1,4 @@
 import React from "react";
-import {withNavigation} from "../../hoc/NavBar";
 import Phone from "../../components/Phone";
 import styled from "styled-components";
 import {useDispatch, useSelector} from "react-redux";

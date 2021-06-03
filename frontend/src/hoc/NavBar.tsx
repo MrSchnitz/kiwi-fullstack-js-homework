@@ -1,20 +1,13 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import ButtonLink from "@kiwicom/orbit-components/lib/ButtonLink";
-import CountryFlag from "@kiwicom/orbit-components/lib/CountryFlag";
 import NavigationBar from "@kiwicom/orbit-components/lib/NavigationBar";
 import Stack from "@kiwicom/orbit-components/lib/Stack";
-import AirplaneTakeoff from "@kiwicom/orbit-components/lib/icons/AirplaneTakeoff";
-import Accommodation from "@kiwicom/orbit-components/lib/icons/Accommodation";
-import Partners from "@kiwicom/orbit-components/lib/icons/Partners";
-import QuestionCircle from "@kiwicom/orbit-components/lib/icons/QuestionCircle";
-import AccountCircle from "@kiwicom/orbit-components/lib/icons/AccountCircle";
 import styled from "styled-components";
-import { useDispatch } from "react-redux";
-import { push } from "connected-react-router";
-import { log } from "util";
-import { Link, useLocation } from "react-router-dom";
-import { LinkInterface, NavigationLinks } from "../internals/links";
-import { Button, Heading } from "@kiwicom/orbit-components/lib";
+import {useDispatch} from "react-redux";
+import {push} from "connected-react-router";
+import {useLocation} from "react-router-dom";
+import {LinkInterface, NavigationLinks} from "../internals/links";
+import {Heading} from "@kiwicom/orbit-components/lib";
 
 export const withNavigation = (WrappedComponent: any) => (props: any) => {
   const dispatch = useDispatch();

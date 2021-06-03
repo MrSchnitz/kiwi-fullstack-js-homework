@@ -1,24 +1,16 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { push } from "connected-react-router";
 import styled from "styled-components";
-import { withNavigation } from "../../hoc/NavBar";
 import ReactMarkdown from "react-markdown";
-import gfm from "remark-gfm";
 
 function DescriptionPage() {
-  const dispatch = useDispatch();
-
-  const redirect = (url: string) => dispatch(push(url));
-
   const markdown = `
-  # Fullstack JS homework 
-  \n\n 
-  ## Implement a number to word list converter as a Node backend and React frontend.
-  \n\n
-  ---
-  \n\n
-  The backend should provide an endpoint that converts a given numeric
+# Fullstack JS homework 
+\n\n 
+## Implement a number to word list converter as a Node backend and React frontend.
+\n\n
+---
+\n\n
+The backend should provide an endpoint that converts a given numeric
 string into a list of corresponding words in the style of:
 
 * [T9](https://en.wikipedia.org/wiki/T9_(predictive_text)) or 
@@ -60,14 +52,20 @@ const DescriptionPageLayout = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   div {
     width: 50%;
+    text-align: justify;
   }
-  
-  p, ul {
+
+  p,
+  ul {
     margin: 1.5rem 0;
     font-size: 1.5rem;
+  }
+
+  ul {
+    padding-left: 2rem;
   }
 `;
 

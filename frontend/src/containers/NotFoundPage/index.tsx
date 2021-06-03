@@ -1,42 +1,45 @@
 import React from "react";
 import styled from "styled-components/macro";
-import {withNavigation} from "../../hoc/NavBar";
 
 function NotFoundPage() {
   return (
     <>
-      <Wrapper>
+      <NotFoundPageLayout>
         <Title>
           4
           <span role="img" aria-label="Crying Face">
-            😢
+            😬
           </span>
           4
+          <p>Page not found.</p>
         </Title>
-        <p>Page not found.</p>
-      </Wrapper>
+      </NotFoundPageLayout>
     </>
   );
 }
 
-const Wrapper = styled.div`
-  height: 100vh;
+const NotFoundPageLayout = styled.div`
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-height: 320px;
 `;
 
 const Title = styled.div`
-  margin-top: -8vh;
   font-weight: bold;
   color: black;
-  font-size: 3.375rem;
+  font-size: 6rem;
+  text-align: center;
 
   span {
-    font-size: 3.125rem;
+    font-size: 5.7rem;
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 2.5rem;
   }
 `;
 
-export default withNavigation(NotFoundPage);
+export default NotFoundPage;

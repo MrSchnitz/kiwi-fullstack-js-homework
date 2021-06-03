@@ -47,7 +47,6 @@ const TextareaLayout = styled.div`
     outline: none;
     border-color: transparent;
     background-color: #d6ead9;
-    // background-color: #ECF8F7;
   }
 `;
 

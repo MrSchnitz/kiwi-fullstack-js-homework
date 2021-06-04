@@ -3,6 +3,7 @@ import { all, call, delay, put, select, takeLatest } from "redux-saga/effects";
 import { RootState } from "../../../internals/RootState";
 import { WordType } from "../../../models/Word";
 import { ENV } from "../../../internals/utils";
+import { toast } from "react-toastify";
 
 /**
  * API State interface
@@ -99,13 +100,19 @@ class MainApi {
             method: "GET",
           }).then((res) => res.json());
 
-        const response = yield call(request);
+        const response: any = yield call(request);
 
         yield delay(500);
+
+        if (response.length < 1) {
+          toast.warning("Ups, no words were found for this number combination");
+        }
 
         yield put(this.slice.actions.addPredictionWords(response as any));
       } catch (e) {
         console.log(e);
+        toast.error("Sorry, something went wrong...");
+        yield put(this.slice.actions.predictionWordsLoading(false));
       }
     }
   }

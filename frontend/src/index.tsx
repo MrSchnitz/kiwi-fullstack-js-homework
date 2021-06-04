@@ -5,7 +5,11 @@ import {Routes} from "./routes";
 import {Provider} from "react-redux";
 import {configureAppStore} from "./internals/configureStore";
 
+// Main styles
 import "./resources/styles/main.scss";
+
+// React Toastify styles
+import 'react-toastify/dist/ReactToastify.css';
 
 const store = configureAppStore();
 

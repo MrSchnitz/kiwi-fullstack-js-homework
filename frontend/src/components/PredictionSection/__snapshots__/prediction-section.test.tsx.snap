@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PredictionSection component should render PredictionSection component 1`] = `ShallowWrapper {}`;

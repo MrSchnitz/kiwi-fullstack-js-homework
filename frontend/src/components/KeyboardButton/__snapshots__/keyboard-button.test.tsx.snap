@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KeyboardButton component should render KeyboardButton component 1`] = `ShallowWrapper {}`;

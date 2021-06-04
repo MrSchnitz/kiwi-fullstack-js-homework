@@ -1,9 +1,9 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, ShallowWrapper } from "enzyme";
 import PageLoader from "./page-loader.component";
 
 describe("PageLoader component", () => {
-  let wrapper: any;
+  let wrapper: ShallowWrapper;
   beforeEach(() => {
     wrapper = shallow(<PageLoader />);
   });

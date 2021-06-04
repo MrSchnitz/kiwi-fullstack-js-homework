@@ -1,8 +1,8 @@
 import React from "react";
-import {shallow, ShallowWrapper} from "enzyme";
-import {withNavigation} from "./navbar.component";
-import {configureAppStore} from "../../internals/configureStore";
-import {Provider} from "react-redux";
+import { shallow, ShallowWrapper } from "enzyme";
+import { withNavigation } from "./navbar.component";
+import { configureAppStore } from "../../internals/configureStore";
+import { Provider } from "react-redux";
 
 describe("NavBar HOC component", () => {
   let wrapper: ShallowWrapper;

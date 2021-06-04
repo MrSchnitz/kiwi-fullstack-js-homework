@@ -1,8 +1,8 @@
 import React from "react";
 import Prediction from "../Prediction/prediction.component";
-import {WordType} from "../../models/Word";
-import {Loading} from "@kiwicom/orbit-components/lib";
-import {PredictionSectionContent} from "./prediction-section.styles";
+import { WordType } from "../../models/Word";
+import { Loading } from "@kiwicom/orbit-components/lib";
+import { PredictionSectionContent } from "./prediction-section.styles";
 
 export interface PredictionSectionProps {
   predictions: WordType[];
@@ -17,7 +17,7 @@ const PredictionSection: React.FC<PredictionSectionProps> = ({
 }: PredictionSectionProps) => {
   return (
     <PredictionSectionContent
-      loading={!!predictionsLoading}
+      isLoading={!!predictionsLoading}
       show={predictions.length > 0 || !!predictionsLoading}
     >
       {predictionsLoading ? (

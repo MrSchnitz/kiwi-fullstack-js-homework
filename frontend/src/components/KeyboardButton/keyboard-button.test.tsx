@@ -1,11 +1,11 @@
 import React from "react";
-import { shallow } from "enzyme";
+import {shallow, ShallowWrapper} from "enzyme";
 import KeyboardButton, {
   KeyboardButtonProps,
 } from "./keyboard-button.component";
 
 describe("KeyboardButton component", () => {
-  let wrapper: any;
+  let wrapper: ShallowWrapper;
   let mockOnClick: any;
 
   beforeEach(() => {

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface PredictionContentInterface {
-  loading: boolean;
+  isLoading: boolean;
   show: boolean;
 }
 
@@ -12,7 +12,7 @@ export const PredictionSectionContent = styled.div<PredictionContentInterface>`
   overflow-x: auto;
   background-color: #008f7b;
   display: flex;
-  justify-content: ${(props) => (props.loading ? "center" : "flex-start")};
+  justify-content: ${(props) => (props.isLoading ? "center" : "flex-start")};
   align-items: center;
 
   transition: 0.5s height;

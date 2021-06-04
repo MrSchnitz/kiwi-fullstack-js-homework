@@ -1,8 +1,8 @@
-import {createSelector, createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {all, call, delay, put, select, takeLatest} from "redux-saga/effects";
-import {RootState} from "../../../internals/RootState";
-import {WordType} from "../../../models/Word";
-import {ENV} from "../../../internals/utils";
+import { createSelector, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { all, call, delay, put, select, takeLatest } from "redux-saga/effects";
+import { RootState } from "../../../internals/RootState";
+import { WordType } from "../../../models/Word";
+import { ENV } from "../../../internals/utils";
 
 /**
  * API State interface
@@ -83,7 +83,7 @@ class MainApi {
   /*
    * SAGAS
    */
-  private *handleT9Number(action: PayloadAction<string>): Generator<any> {
+  public *handleT9Number(action: PayloadAction<string>): Generator<any> {
     yield delay(500);
 
     const numbers: any = yield select(
@@ -160,4 +160,5 @@ export const {
   selectPredictionWords,
   selectPredictionWordsLoading,
   saga: MainApiSaga,
+  handleT9Number,
 } = MainApi.getInstance();

@@ -1,8 +1,14 @@
 import React from "react";
 import Phone from "../../components/Phone/phone.component";
-import {useDispatch, useSelector} from "react-redux";
-import {MainAPI, selectNumbers, selectPredictionWords, selectPredictionWordsLoading, selectText,} from "./api/MainAPI";
-import {WordType} from "../../models/Word";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  MainAPI,
+  selectNumbers,
+  selectPredictionWords,
+  selectPredictionWordsLoading,
+  selectText,
+} from "./api/MainAPI";
+import { WordType } from "../../models/Word";
 import { MainPageLayout } from "./main-page.styles";
 
 function MainPage() {

@@ -2,12 +2,13 @@ import React from "react";
 import ButtonLink from "@kiwicom/orbit-components/lib/ButtonLink";
 import NavigationBar from "@kiwicom/orbit-components/lib/NavigationBar";
 import Stack from "@kiwicom/orbit-components/lib/Stack";
-import {useDispatch} from "react-redux";
-import {push} from "connected-react-router";
-import {useLocation} from "react-router-dom";
-import {LinkInterface, NavigationLinks} from "../../internals/links";
-import {Heading} from "@kiwicom/orbit-components/lib";
-import {PageContent, PageHeading} from "./navbar.styles";
+import { useDispatch } from "react-redux";
+import { push } from "connected-react-router";
+import { useLocation } from "react-router-dom";
+import { LinkInterface, NavigationLinks } from "../../internals/links";
+import { Button, Heading } from "@kiwicom/orbit-components/lib";
+import { PageContent, PageHeading } from "./navbar.styles";
+import { toast, ToastContainer } from "react-toastify";
 
 export const withNavigation = (WrappedComponent: any) => (props: any) => {
   const dispatch = useDispatch();
@@ -17,6 +18,8 @@ export const withNavigation = (WrappedComponent: any) => (props: any) => {
   const redirect: any = (url: string) => dispatch(push(url));
 
   const isActive = (url: string) => location.pathname === url;
+
+  const notify: any = (text: string) => toast(text);
 
   const renderLinks = (links: LinkInterface[]) => {
     return links.map((link: LinkInterface, index: number) => (
@@ -57,6 +60,7 @@ export const withNavigation = (WrappedComponent: any) => (props: any) => {
           </Stack>
         </NavigationBar>
         <PageContent>{children}</PageContent>
+        <ToastContainer position={"bottom-right"} />
       </>
     );
   };

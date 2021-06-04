@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound page should render NotFound page 1`] = `ShallowWrapper {}`;

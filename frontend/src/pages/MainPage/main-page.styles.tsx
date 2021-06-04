@@ -6,3 +6,5 @@ export const MainPageLayout = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+MainPageLayout.displayName = "MainPageLayout";

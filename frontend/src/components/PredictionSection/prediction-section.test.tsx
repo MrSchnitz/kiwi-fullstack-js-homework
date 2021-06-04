@@ -32,7 +32,7 @@ describe("PredictionSection component", () => {
     mockProps.predictions = [];
     wrapper = shallow(<PredictionSection {...mockProps} />);
 
-    expect(wrapper.find("PredictionSectionContent").prop("loading")).toBe(
+    expect(wrapper.find("PredictionSectionContent").prop("isLoading")).toBe(
       false
     );
     expect(wrapper.find("PredictionSectionContent").prop("show")).toBe(false);

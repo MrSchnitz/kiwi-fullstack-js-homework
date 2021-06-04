@@ -1,15 +1,13 @@
 import React from "react";
-import {Textarea} from "@kiwicom/orbit-components/lib";
-import {TextareaLayout} from "./phone-display.styles";
+import { Textarea } from "@kiwicom/orbit-components/lib";
+import { TextareaLayout } from "./phone-display.styles";
 
-interface PhoneDisplayProps {
+export interface PhoneDisplayProps {
   text: string;
-  onChange?: (value: string) => void;
 }
 
 const PhoneDisplay: React.FC<PhoneDisplayProps> = ({
   text,
-  onChange,
 }: PhoneDisplayProps) => {
   return (
     <TextareaLayout>

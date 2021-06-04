@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Keyboard component should render Keyboad component 1`] = `ShallowWrapper {}`;
+exports[`Keyboard component should render Keyboard component 1`] = `ShallowWrapper {}`;

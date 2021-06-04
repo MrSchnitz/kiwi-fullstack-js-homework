@@ -2,7 +2,7 @@ import React from "react";
 import {Button} from "@kiwicom/orbit-components/lib";
 import {PredictionStyles} from "./prediction.styles";
 
-interface PredictionProps {
+export interface PredictionProps {
   text: string;
   onClick: () => void;
 }

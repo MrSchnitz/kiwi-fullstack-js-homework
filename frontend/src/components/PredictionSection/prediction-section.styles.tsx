@@ -33,3 +33,5 @@ export const PredictionSectionContent = styled.div<PredictionContentInterface>`
     background: #008f7b8c;
   }
 `;
+
+PredictionSectionContent.displayName = "PredictionSectionContent";

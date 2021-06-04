@@ -20,7 +20,7 @@ describe("Keyboard component", () => {
     wrapper = shallow(<Keyboard {...mockProps} />);
   });
 
-  it("should render Keyboad component", () => {
+  it("should render Keyboard component", () => {
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -37,7 +37,7 @@ describe("Keyboard component", () => {
       )
       .simulate("click");
 
-    expect(mockOnDeleteChar.mock.calls.length).toEqual(1);
+    expect(mockOnDeleteChar).toHaveBeenCalled();
   });
 
   it("should call onKeyPressed when component is clicked", () => {
@@ -45,6 +45,6 @@ describe("Keyboard component", () => {
       .findWhere((n) => n.name() === "KeyboardButton" && n.prop("number") === 5)
       .simulate("click");
 
-    expect(mockOnKeyPressed.mock.calls.length).toEqual(1);
+    expect(mockOnKeyPressed).toHaveBeenCalled();
   });
 });

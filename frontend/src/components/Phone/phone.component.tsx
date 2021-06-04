@@ -6,7 +6,7 @@ import PredictionSection from "../PredictionSection/prediction-section.component
 import {WordType} from "../../models/Word";
 import {PhoneContent, PhoneLockedScreen} from "./phone.styles";
 
-interface PhoneProps {
+export interface PhoneProps {
   displayText: string;
   predictionWords: WordType[];
   predictionWordsLoading?: boolean;

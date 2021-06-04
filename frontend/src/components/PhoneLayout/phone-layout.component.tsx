@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 
-interface PhoneLayoutProps {
+export interface PhoneLayoutProps {
   children: ReactNode;
 }
 

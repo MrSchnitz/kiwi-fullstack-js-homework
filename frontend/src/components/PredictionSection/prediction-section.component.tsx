@@ -1,11 +1,10 @@
 import React from "react";
-import styled from "styled-components";
 import Prediction from "../Prediction/prediction.component";
-import { WordType } from "../../models/Word";
-import { Loading } from "@kiwicom/orbit-components/lib";
+import {WordType} from "../../models/Word";
+import {Loading} from "@kiwicom/orbit-components/lib";
 import {PredictionSectionContent} from "./prediction-section.styles";
 
-interface PredictionSectionProps {
+export interface PredictionSectionProps {
   predictions: WordType[];
   predictionsLoading?: boolean;
   onSelectPrediction: (word: WordType) => void;

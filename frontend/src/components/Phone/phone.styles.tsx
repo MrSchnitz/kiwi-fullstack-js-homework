@@ -1,4 +1,4 @@
-import styled, {keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const PhoneContent = styled.div`
   height: 100%;
@@ -9,6 +9,8 @@ export const PhoneContent = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+PhoneContent.displayName = "PhoneContent";
 
 export const PhoneLockScreenAnimation = keyframes`
     0% {
@@ -60,3 +62,5 @@ export const PhoneLockedScreen = styled.div`
     animation: ${PhoneLockScreenAnimation} 1.5s alternate infinite;
   }
 `;
+
+PhoneLockedScreen.displayName = "PhoneLockedScreen";

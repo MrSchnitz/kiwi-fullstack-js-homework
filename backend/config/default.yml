@@ -1,6 +1,3 @@
-server:
-  port: 5000
-
 db:
   type: 'sqlite'
   port: 5432

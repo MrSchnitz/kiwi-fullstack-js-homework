@@ -1,7 +1,7 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
 import KeyboardButton from "../KeyboardButton/keyboard-button.component";
 import { ChevronDoubleLeft } from "@kiwicom/orbit-components/lib/icons";
+import { KeyboardButtonsLayout, KeyboardLayout } from "./keyboard.styles";
 
 export interface KeyboardProps {
   onKeyPressed: (key: number) => void;
@@ -77,44 +77,5 @@ const Keyboard: React.FC<KeyboardProps> = ({
     </KeyboardLayout>
   );
 };
-
-interface KeyboardLayoutInterface {
-  show: boolean;
-}
-
-const KeyboardPopUpAnimation = keyframes`
-  0% {
-    transform: translateY(105%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-`;
-
-const KeyboardLayout = styled.div<KeyboardLayoutInterface>`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #ecf8f7;
-
-  transition: 2s all;
-
-  animation: ${(props) => (props.show ? KeyboardPopUpAnimation : 0)};
-  animation-duration: 2s;
-`;
-
-KeyboardLayout.displayName = "KeyboardLayout";
-
-const KeyboardButtonsLayout = styled.div`
-  width: 100%;
-  padding: 0.3rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0.3rem;
-
-  transition: 2s all;
-`;
 
 export default Keyboard;

@@ -1,7 +1,7 @@
 import React from "react";
-import { Button } from "@kiwicom/orbit-components/lib";
-import styled from "styled-components";
-import { Props } from "@kiwicom/orbit-components/lib/Button";
+import {Button} from "@kiwicom/orbit-components/lib";
+import {Props} from "@kiwicom/orbit-components/lib/Button";
+import {ButtonContent, ButtonLetters, ButtonNumber} from "./keyboard.styles";
 
 export interface KeyboardButtonProps {
   number: number;
@@ -31,17 +31,5 @@ const KeyboardButton: React.FC<KeyboardButtonProps> = ({
     </Button>
   );
 };
-
-const ButtonContent = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const ButtonNumber = styled.h1`
-  margin-right: 0.5rem;
-`;
-
-const ButtonLetters = styled.h2``;
 
 export default KeyboardButton;

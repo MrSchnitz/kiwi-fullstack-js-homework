@@ -1,9 +1,9 @@
 import React from "react";
 import Phone from "../../components/Phone/phone.component";
-import styled from "styled-components";
 import {useDispatch, useSelector} from "react-redux";
 import {MainAPI, selectNumbers, selectPredictionWords, selectPredictionWordsLoading, selectText,} from "./api/MainAPI";
 import {WordType} from "../../models/Word";
+import { MainPageLayout } from "./main-page.styles";
 
 function MainPage() {
   const dispatch = useDispatch();
@@ -33,12 +33,5 @@ function MainPage() {
     </MainPageLayout>
   );
 }
-
-const MainPageLayout = styled.div`
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
 
 export default MainPage;

@@ -1,6 +1,6 @@
 import React from "react";
-import styled from "styled-components";
-import { Loading } from "@kiwicom/orbit-components/lib";
+import {Loading} from "@kiwicom/orbit-components/lib";
+import {PageLoaderLayout} from "./page-loader.styles";
 
 const PageLoader: React.FC = () => {
   return (
@@ -9,12 +9,5 @@ const PageLoader: React.FC = () => {
     </PageLoaderLayout>
   );
 };
-
-const PageLoaderLayout = styled.div`
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
 
 export default PageLoader;
